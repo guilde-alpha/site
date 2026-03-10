@@ -1,0 +1,184 @@
+---
+layout: layouts/base.njk
+title: Accueil
+description: La Guilde Alpha, association de jeux de rôles à Pau. Venez découvrir le JDR, rencontrer des joueurs et participer à nos aventures.
+---
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+
+  <!-- Background layers -->
+  <div class="absolute inset-0 bg-hero-gradient"></div>
+  <div class="absolute inset-0 bg-[url('/images/bg-texture.svg')] opacity-[0.03]"></div>
+
+  <!-- Decorative orbs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gold/8 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="relative container mx-auto px-6 max-w-4xl text-center py-20">
+
+    <!-- Eyebrow -->
+    <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-8">
+      <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+      <span class="text-gold text-sm font-medium">Association de JDR à Pau depuis 2012</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="font-display font-bold text-5xl md:text-7xl text-text leading-tight mb-6">
+      Vivez des aventures<br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-gold-bright">inoubliables</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-muted text-xl md:text-2xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      Le jeu de rôle : un loisir où <strong class="text-text">votre imagination est la seule limite</strong>.
+      Rejoignez une communauté passionnée pour explorer des univers fantastiques, tisser des histoires épiques, et forger des souvenirs.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/join/" class="btn-primary text-base px-8 py-4">
+        Rejoindre l'aventure
+      </a>
+      <a href="/events/" class="btn-outline text-base px-8 py-4">
+        Voir le calendrier
+      </a>
+    </div>
+
+    <!-- Quick stats -->
+    <div class="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
+      <div class="text-center">
+        <div class="font-display text-3xl font-bold text-gold">2012</div>
+        <div class="text-muted text-xs mt-1">Création</div>
+      </div>
+      <div class="text-center border-x border-border">
+        <div class="font-display text-3xl font-bold text-gold">3</div>
+        <div class="text-muted text-xs mt-1">Créneaux / semaine</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-3xl font-bold text-gold">50€</div>
+        <div class="text-muted text-xs mt-1">Cotisation / an</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted/50 animate-bounce">
+    <span class="text-xs tracking-widest uppercase">Découvrir</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- What is RPG section -->
+<section class="py-24 bg-surface">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">C'est quoi le JDR ?</p>
+        <h2 class="font-display text-4xl font-bold text-text mb-6 leading-tight">
+          Un jeu de société narratif sans plateau ni vainqueur
+        </h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Le jeu de rôle sur table est une aventure collaborative. Un <strong class="text-text">Maître du Jeu</strong> décrit
+          un monde, une situation, des défis. Les autres joueurs incarnent des personnages et décident
+          de leurs actions — le reste n'est que dés, imagination et bonne humeur.
+        </p>
+        <p class="text-muted leading-relaxed">
+          Pas besoin d'expérience. Pas besoin de matériel. Juste l'envie de raconter une histoire ensemble.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors">
+          <div class="text-3xl mb-3">🎲</div>
+          <h3 class="font-display font-semibold text-text mb-2">Imprévisible</h3>
+          <p class="text-muted text-sm">Les dés apportent tension et surprise à chaque session.</p>
+        </div>
+        <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors mt-8">
+          <div class="text-3xl mb-3">📖</div>
+          <h3 class="font-display font-semibold text-text mb-2">Narratif</h3>
+          <p class="text-muted text-sm">Chaque partie est une histoire unique que vous écrivez ensemble.</p>
+        </div>
+        <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors">
+          <div class="text-3xl mb-3">🧙</div>
+          <h3 class="font-display font-semibold text-text mb-2">Créatif</h3>
+          <p class="text-muted text-sm">Créez votre personnage, son histoire, sa personnalité.</p>
+        </div>
+        <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors mt-8">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-display font-semibold text-text mb-2">Social</h3>
+          <p class="text-muted text-sm">Coopérez, débattez, riez — en vrai, autour d'une table.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sessions section -->
+<section class="py-24">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <div class="text-center mb-14">
+      <p class="text-gold text-sm font-medium uppercase tracking-widest mb-3">Quand jouer ?</p>
+      <h2 class="font-display text-4xl font-bold text-text">Nos créneaux hebdomadaires</h2>
+      <p class="text-muted mt-4 max-w-xl mx-auto">
+        Nous jouons à la <strong class="text-text">MJC du Laü</strong>, 81 avenue du Loup, Pau — plusieurs fois par semaine.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card group">
+        <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
+          <span class="text-gold font-display font-bold text-lg">Ve</span>
+        </div>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">Vendredi Soir</h3>
+        <p class="text-gold text-sm font-medium mb-3">20h30 — minuit</p>
+        <p class="text-muted text-sm leading-relaxed">La soirée idéale pour démarrer le week-end en beauté, avec campagnes et one-shots.</p>
+      </div>
+      <div class="card group">
+        <div class="w-12 h-12 bg-violet/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-violet/20 transition-colors">
+          <span class="text-violet font-display font-bold text-lg">Sa</span>
+        </div>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">Samedi Soir</h3>
+        <p class="text-violet text-sm font-medium mb-3">20h30 — minuit</p>
+        <p class="text-muted text-sm leading-relaxed">Le créneau historique, parfait pour les campagnes longues en cours.</p>
+      </div>
+      <div class="card group">
+        <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
+          <span class="text-gold font-display font-bold text-lg">Di</span>
+        </div>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">Dimanche AM</h3>
+        <p class="text-gold text-sm font-medium mb-3">14h00 — 18h00</p>
+        <p class="text-muted text-sm leading-relaxed">Pour les lève-tôt, une après-midi détendue pour s'immerger dans une aventure.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="{{ site.googleCalendar }}" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        Voir le calendrier complet
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Join -->
+<section class="py-24 bg-surface">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">Prêt à jouer ?</p>
+    <h2 class="font-display text-4xl font-bold text-text mb-6">3 parties d'essai gratuites</h2>
+    <p class="text-muted text-lg mb-10 leading-relaxed">
+      Rejoignez notre Discord, présentez-vous, et participez à une prochaine partie —
+      sans engagement. Si l'ambiance vous plaît, il sera temps de cotiser.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="{{ site.discord }}" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-2 text-base px-8 py-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.013.043.031.056a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+        </svg>
+        Rejoindre le Discord
+      </a>
+      <a href="/join/" class="btn-outline text-base px-8 py-4">En savoir plus</a>
+    </div>
+  </div>
+</section>

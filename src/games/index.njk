@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: Nos Jeux
+description: Découvrez les jeux de rôles pratiqués à la Guilde Alpha — D&D, Cthulhu, Cyberpunk, Vampire et bien d'autres.
+---
+
+<div class="pt-20">
+
+  <!-- Page header -->
+  <section class="py-20 bg-surface2 border-b border-border relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(107,93,211,0.08),transparent_50%)]"></div>
+    <div class="container mx-auto px-6 max-w-4xl relative">
+      <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">Univers</p>
+      <h1 class="font-display font-bold text-5xl md:text-6xl text-text mb-6">Nos Univers de Jeu</h1>
+      <p class="text-muted text-xl max-w-2xl leading-relaxed">
+        Les tables tournent selon les envies des MJ et des joueurs. Du médiéval-fantastique à l'horreur cosmique,
+        en passant par le cyberpunk — il y en a pour tous les goûts.
+      </p>
+    </div>
+  </section>
+
+  <!-- Games grid -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for game in collections.games | sort(false, false, 'data.title') %}
+        <a href="{{ game.url }}" class="card group block hover:border-gold/40 hover:no-underline">
+          <div class="flex flex-col h-full">
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <span class="text-3xl">{{ game.data.icon or "🎲" }}</span>
+              <span class="px-2 py-1 rounded-full text-xs font-medium bg-border/60 text-muted border border-border">
+                {{ game.data.system }}
+              </span>
+            </div>
+            <h3 class="font-display font-semibold text-text text-xl mb-2 group-hover:text-gold transition-colors">
+              {{ game.data.title }}
+            </h3>
+            <p class="text-gold text-sm font-medium mb-3">{{ game.data.genre }}</p>
+            <p class="text-muted text-sm leading-relaxed flex-1">{{ game.data.description }}</p>
+            <div class="mt-5 flex items-center gap-1 text-gold text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              En savoir plus
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Note about rotation -->
+  <section class="py-12 bg-surface border-t border-border">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+      <p class="text-muted leading-relaxed">
+        💡 Cette liste n'est pas exhaustive — les jeux pratiqués évoluent constamment.
+        Pour connaître les tables actuellement ouvertes, rejoignez notre
+        <a href="{{ site.discord }}" class="text-gold hover:underline" target="_blank" rel="noopener noreferrer">Discord</a>
+        ou consultez le
+        <a href="{{ site.googleCalendar }}" class="text-gold hover:underline" target="_blank" rel="noopener noreferrer">calendrier</a>.
+      </p>
+    </div>
+  </section>
+
+</div>
