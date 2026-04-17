@@ -6,7 +6,7 @@
 backend:
   # Connexion GitHub — remplacer "VOTRE-USERNAME" par votre compte GitHub
   name: github
-  repo: VOTRE-USERNAME/guilde-alpha
+  repo: guilde-alpha/site
   branch: main
 
 # Dossier pour les images uploadées via le CMS
