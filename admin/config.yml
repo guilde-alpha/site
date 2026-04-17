@@ -9,8 +9,10 @@ backend:
   repo: guilde-alpha/site
   branch: main
 
-# Proxy local pour développement (désactiver en production)
-local_backend: true
+# Proxy local — actif uniquement sur localhost, ignoré en production
+local_backend:
+  url: http://localhost:8081/api/v1
+  allowed_hosts: ['localhost']
 
 # Dossier pour les images uploadées via le CMS
 media_folder: "src/images/uploads"
