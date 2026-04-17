@@ -9,6 +9,9 @@ backend:
   repo: guilde-alpha/site
   branch: main
 
+# Proxy local pour développement (désactiver en production)
+local_backend: true
+
 # Dossier pour les images uploadées via le CMS
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
@@ -25,10 +28,52 @@ collections:
 
       - name: "home"
         label: "🏠 Page d'Accueil"
-        file: "src/index.njk"
+        file: "src/index.md"
         fields:
-          - { label: "Titre de la page", name: "title", widget: "string" }
+          - { label: "Titre SEO", name: "title", widget: "string" }
           - { label: "Description SEO", name: "description", widget: "text" }
+          - { label: "Accroche hero (petite ligne)", name: "hero_eyebrow", widget: "string" }
+          - { label: "Titre principal", name: "hero_title", widget: "string" }
+          - { label: "Sous-titre hero", name: "hero_subtitle", widget: "text" }
+          - { label: "Bouton principal (texte)", name: "hero_cta_primary", widget: "string" }
+          - { label: "Bouton secondaire (texte)", name: "hero_cta_secondary", widget: "string" }
+          - { label: "Stat 1 — valeur", name: "stat_1_value", widget: "string" }
+          - { label: "Stat 1 — label", name: "stat_1_label", widget: "string" }
+          - { label: "Stat 2 — valeur", name: "stat_2_value", widget: "string" }
+          - { label: "Stat 2 — label", name: "stat_2_label", widget: "string" }
+          - { label: "Stat 3 — valeur", name: "stat_3_value", widget: "string" }
+          - { label: "Stat 3 — label", name: "stat_3_label", widget: "string" }
+          - { label: "Section JDR — titre", name: "jdr_title", widget: "string" }
+          - { label: "Section JDR — intro", name: "jdr_intro", widget: "text" }
+          - { label: "Section JDR — suite", name: "jdr_body", widget: "text" }
+          - { label: "Créneaux — titre", name: "sessions_title", widget: "string" }
+          - { label: "Créneaux — lieu", name: "sessions_location", widget: "string" }
+          - { label: "Créneau 1 — abréviation (ex: Ve)", name: "slot_1_label", widget: "string" }
+          - { label: "Créneau 1 — nom", name: "slot_1_title", widget: "string" }
+          - { label: "Créneau 1 — horaires", name: "slot_1_hours", widget: "string" }
+          - { label: "Créneau 1 — description", name: "slot_1_desc", widget: "string" }
+          - label: "Créneau 1 — couleur"
+            name: "slot_1_color"
+            widget: "select"
+            options: ["gold", "violet"]
+          - { label: "Créneau 2 — abréviation (ex: Sa)", name: "slot_2_label", widget: "string" }
+          - { label: "Créneau 2 — nom", name: "slot_2_title", widget: "string" }
+          - { label: "Créneau 2 — horaires", name: "slot_2_hours", widget: "string" }
+          - { label: "Créneau 2 — description", name: "slot_2_desc", widget: "string" }
+          - label: "Créneau 2 — couleur"
+            name: "slot_2_color"
+            widget: "select"
+            options: ["gold", "violet"]
+          - { label: "Créneau 3 — abréviation (ex: Di)", name: "slot_3_label", widget: "string" }
+          - { label: "Créneau 3 — nom", name: "slot_3_title", widget: "string" }
+          - { label: "Créneau 3 — horaires", name: "slot_3_hours", widget: "string" }
+          - { label: "Créneau 3 — description", name: "slot_3_desc", widget: "string" }
+          - label: "Créneau 3 — couleur"
+            name: "slot_3_color"
+            widget: "select"
+            options: ["gold", "violet"]
+          - { label: "CTA final — titre", name: "cta_title", widget: "string" }
+          - { label: "CTA final — texte", name: "cta_body", widget: "text" }
 
       - name: "about"
         label: "🏛️ L'Association"

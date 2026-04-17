@@ -1,7 +1,5 @@
 ---
 layout: layouts/base.njk
-title: Accueil
-description: La Guilde Alpha, association de jeux de rôles à Pau. Venez découvrir le JDR, rencontrer des joueurs et participer à nos aventures.
 ---
 
 <!-- Hero -->
@@ -20,44 +18,42 @@ description: La Guilde Alpha, association de jeux de rôles à Pau. Venez décou
     <!-- Eyebrow -->
     <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-8">
       <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-      <span class="text-gold text-sm font-medium">Association de JDR à Pau depuis 2012</span>
+      <span class="text-gold text-sm font-medium">{{ hero_eyebrow }}</span>
     </div>
 
     <!-- Title -->
     <h1 class="font-display font-bold text-5xl md:text-7xl text-text leading-tight mb-6">
-      Vivez des aventures<br>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-gold-bright">inoubliables</span>
+      {{ hero_title }}
     </h1>
 
     <!-- Subtitle -->
     <p class="text-muted text-xl md:text-2xl max-w-2xl mx-auto mb-10 leading-relaxed">
-      Le jeu de rôle : un loisir où <strong class="text-text">votre imagination est la seule limite</strong>.
-      Rejoignez une communauté passionnée pour explorer des univers fantastiques, tisser des histoires épiques, et forger des souvenirs.
+      {{ hero_subtitle }}
     </p>
 
     <!-- CTAs -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="/join/" class="btn-primary text-base px-8 py-4">
-        Rejoindre l'aventure
+        {{ hero_cta_primary }}
       </a>
       <a href="/events/" class="btn-outline text-base px-8 py-4">
-        Voir le calendrier
+        {{ hero_cta_secondary }}
       </a>
     </div>
 
     <!-- Quick stats -->
     <div class="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
       <div class="text-center">
-        <div class="font-display text-3xl font-bold text-gold">2012</div>
-        <div class="text-muted text-xs mt-1">Création</div>
+        <div class="font-display text-3xl font-bold text-gold">{{ stat_1_value }}</div>
+        <div class="text-muted text-xs mt-1">{{ stat_1_label }}</div>
       </div>
       <div class="text-center border-x border-border">
-        <div class="font-display text-3xl font-bold text-gold">3</div>
-        <div class="text-muted text-xs mt-1">Créneaux / semaine</div>
+        <div class="font-display text-3xl font-bold text-gold">{{ stat_2_value }}</div>
+        <div class="text-muted text-xs mt-1">{{ stat_2_label }}</div>
       </div>
       <div class="text-center">
-        <div class="font-display text-3xl font-bold text-gold">50€</div>
-        <div class="text-muted text-xs mt-1">Cotisation / an</div>
+        <div class="font-display text-3xl font-bold text-gold">{{ stat_3_value }}</div>
+        <div class="text-muted text-xs mt-1">{{ stat_3_label }}</div>
       </div>
     </div>
   </div>
@@ -78,15 +74,13 @@ description: La Guilde Alpha, association de jeux de rôles à Pau. Venez décou
       <div>
         <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">C'est quoi le JDR ?</p>
         <h2 class="font-display text-4xl font-bold text-text mb-6 leading-tight">
-          Un jeu de société narratif sans plateau ni vainqueur
+          {{ jdr_title }}
         </h2>
         <p class="text-muted leading-relaxed mb-6">
-          Le jeu de rôle sur table est une aventure collaborative. Un <strong class="text-text">Maître du Jeu</strong> décrit
-          un monde, une situation, des défis. Les autres joueurs incarnent des personnages et décident
-          de leurs actions — le reste n'est que dés, imagination et bonne humeur.
+          {{ jdr_intro }}
         </p>
         <p class="text-muted leading-relaxed">
-          Pas besoin d'expérience. Pas besoin de matériel. Juste l'envie de raconter une histoire ensemble.
+          {{ jdr_body }}
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
@@ -120,35 +114,35 @@ description: La Guilde Alpha, association de jeux de rôles à Pau. Venez décou
   <div class="container mx-auto px-6 max-w-6xl">
     <div class="text-center mb-14">
       <p class="text-gold text-sm font-medium uppercase tracking-widest mb-3">Quand jouer ?</p>
-      <h2 class="font-display text-4xl font-bold text-text">Nos créneaux hebdomadaires</h2>
+      <h2 class="font-display text-4xl font-bold text-text">{{ sessions_title }}</h2>
       <p class="text-muted mt-4 max-w-xl mx-auto">
-        Nous jouons à la <strong class="text-text">MJC du Laü</strong>, 81 avenue du Loup, Pau — plusieurs fois par semaine.
+        {{ sessions_location }}
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="card group">
-        <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-          <span class="text-gold font-display font-bold text-lg">Ve</span>
+        <div class="w-12 h-12 bg-{{ slot_1_color }}/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-{{ slot_1_color }}/20 transition-colors">
+          <span class="text-{{ slot_1_color }} font-display font-bold text-lg">{{ slot_1_label }}</span>
         </div>
-        <h3 class="font-display font-semibold text-text text-lg mb-2">Vendredi Soir</h3>
-        <p class="text-gold text-sm font-medium mb-3">20h30 — minuit</p>
-        <p class="text-muted text-sm leading-relaxed">La soirée idéale pour démarrer le week-end en beauté, avec campagnes et one-shots.</p>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">{{ slot_1_title }}</h3>
+        <p class="text-{{ slot_1_color }} text-sm font-medium mb-3">{{ slot_1_hours }}</p>
+        <p class="text-muted text-sm leading-relaxed">{{ slot_1_desc }}</p>
       </div>
       <div class="card group">
-        <div class="w-12 h-12 bg-violet/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-violet/20 transition-colors">
-          <span class="text-violet font-display font-bold text-lg">Sa</span>
+        <div class="w-12 h-12 bg-{{ slot_2_color }}/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-{{ slot_2_color }}/20 transition-colors">
+          <span class="text-{{ slot_2_color }} font-display font-bold text-lg">{{ slot_2_label }}</span>
         </div>
-        <h3 class="font-display font-semibold text-text text-lg mb-2">Samedi Soir</h3>
-        <p class="text-violet text-sm font-medium mb-3">20h30 — minuit</p>
-        <p class="text-muted text-sm leading-relaxed">Le créneau historique, parfait pour les campagnes longues en cours.</p>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">{{ slot_2_title }}</h3>
+        <p class="text-{{ slot_2_color }} text-sm font-medium mb-3">{{ slot_2_hours }}</p>
+        <p class="text-muted text-sm leading-relaxed">{{ slot_2_desc }}</p>
       </div>
       <div class="card group">
-        <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-          <span class="text-gold font-display font-bold text-lg">Di</span>
+        <div class="w-12 h-12 bg-{{ slot_3_color }}/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-{{ slot_3_color }}/20 transition-colors">
+          <span class="text-{{ slot_3_color }} font-display font-bold text-lg">{{ slot_3_label }}</span>
         </div>
-        <h3 class="font-display font-semibold text-text text-lg mb-2">Dimanche AM</h3>
-        <p class="text-gold text-sm font-medium mb-3">14h00 — 18h00</p>
-        <p class="text-muted text-sm leading-relaxed">Pour les lève-tôt, une après-midi détendue pour s'immerger dans une aventure.</p>
+        <h3 class="font-display font-semibold text-text text-lg mb-2">{{ slot_3_title }}</h3>
+        <p class="text-{{ slot_3_color }} text-sm font-medium mb-3">{{ slot_3_hours }}</p>
+        <p class="text-muted text-sm leading-relaxed">{{ slot_3_desc }}</p>
       </div>
     </div>
     <div class="text-center mt-10">
@@ -166,10 +160,9 @@ description: La Guilde Alpha, association de jeux de rôles à Pau. Venez décou
 <section class="py-24 bg-surface">
   <div class="container mx-auto px-6 max-w-3xl text-center">
     <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">Prêt à jouer ?</p>
-    <h2 class="font-display text-4xl font-bold text-text mb-6">3 parties d'essai gratuites</h2>
+    <h2 class="font-display text-4xl font-bold text-text mb-6">{{ cta_title }}</h2>
     <p class="text-muted text-lg mb-10 leading-relaxed">
-      Rejoignez notre Discord, présentez-vous, et participez à une prochaine partie —
-      sans engagement. Si l'ambiance vous plaît, il sera temps de cotiser.
+      {{ cta_body }}
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="{{ site.discord }}" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-2 text-base px-8 py-4">
