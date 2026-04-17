@@ -8,6 +8,7 @@ backend:
   repo: guilde-alpha/site
   branch: main
   base_url: https://site.guildealpha.com
+  auth_endpoint: api/auth
 
 # Proxy local — actif uniquement sur localhost, ignoré en production
 local_backend:
