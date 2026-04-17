@@ -4,10 +4,11 @@
 # =============================================================================
 
 backend:
-  # Connexion GitHub — remplacer "VOTRE-USERNAME" par votre compte GitHub
   name: github
   repo: guilde-alpha/site
   branch: main
+  auth_type: pkce
+  app_id: Ov23li3RMt0skAc46RHU
 
 # Proxy local — actif uniquement sur localhost, ignoré en production
 local_backend:
