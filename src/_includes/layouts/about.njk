@@ -1,0 +1,155 @@
+---
+layout: layouts/base.njk
+---
+
+{% set home = null %}
+{% for page in collections.all %}
+  {% if page.url == "/" %}{% set home = page %}{% endif %}
+{% endfor %}
+
+<div class="pt-20">
+
+  <!-- Page header -->
+  <section class="py-20 bg-surface2 border-b border-border relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(107,93,211,0.1),transparent_60%)]"></div>
+    <div class="container mx-auto px-6 max-w-4xl relative">
+      <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">{{ page_eyebrow }}</p>
+      <h1 class="font-display font-bold text-5xl md:text-6xl text-text mb-6">{{ page_title }}</h1>
+      <p class="text-muted text-xl max-w-2xl leading-relaxed">{{ page_subtitle }}</p>
+    </div>
+  </section>
+
+  <!-- Histoire et valeurs -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-text mb-6">{{ histoire_title }}</h2>
+          <div class="space-y-4 text-muted leading-relaxed">
+            <p>{{ histoire_p1 | md | safe }}</p>
+            <p>{{ histoire_p2 | md | safe }}</p>
+            <p>{{ histoire_p3 | md | safe }}</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors">
+            <h3 class="font-display font-semibold text-text mb-2 flex items-center gap-2">
+              <span class="text-2xl">{{ card_1_icon }}</span>{{ card_1_title }}
+            </h3>
+            <p class="text-muted text-sm leading-relaxed">{{ card_1_desc }}</p>
+          </div>
+          <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors">
+            <h3 class="font-display font-semibold text-text mb-2 flex items-center gap-2">
+              <span class="text-2xl">{{ card_2_icon }}</span>{{ card_2_title }}
+            </h3>
+            <p class="text-muted text-sm leading-relaxed">{{ card_2_desc }}</p>
+          </div>
+          <div class="bg-surface2 border border-border rounded-2xl p-6 hover:border-gold/30 transition-colors">
+            <h3 class="font-display font-semibold text-text mb-2 flex items-center gap-2">
+              <span class="text-2xl">{{ card_3_icon }}</span>{{ card_3_title }}
+            </h3>
+            <p class="text-muted text-sm leading-relaxed">{{ card_3_desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le Bureau -->
+  <section class="py-20 bg-surface border-y border-border">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-14">
+        <p class="text-gold text-sm font-medium uppercase tracking-widest mb-3">{{ bureau_eyebrow }}</p>
+        <h2 class="font-display text-4xl font-bold text-text">{{ bureau_title }}</h2>
+        <p class="text-muted mt-4 max-w-xl mx-auto">{{ bureau_subtitle }}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_1_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_1_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_1_desc }}</p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_2_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_2_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_2_desc }}</p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_3_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_3_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_3_desc }}</p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_4_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_4_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_4_desc }}</p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_5_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_5_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_5_desc }}</p>
+        </div>
+        <div class="card text-center">
+          <div class="w-14 h-14 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">{{ bureau_6_icon }}</span>
+          </div>
+          <h3 class="font-display font-semibold text-text">{{ bureau_6_role }}</h3>
+          <p class="text-muted text-sm mt-2">{{ bureau_6_desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Où nous trouver -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-14">
+        <p class="text-gold text-sm font-medium uppercase tracking-widest mb-3">{{ lieu_eyebrow }}</p>
+        <h2 class="font-display text-4xl font-bold text-text">{{ lieu_title }}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-surface2 border border-border rounded-2xl p-8">
+          <h3 class="font-display font-semibold text-text text-xl mb-4 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            {{ lieu_name }}
+          </h3>
+          <p class="text-muted leading-relaxed">{{ lieu_address | replace("\n", "<br>") | safe }}</p>
+          <p class="text-muted text-sm mt-4">{{ lieu_desc }}</p>
+        </div>
+        <div class="bg-surface2 border border-border rounded-2xl p-8">
+          <h3 class="font-display font-semibold text-text text-xl mb-4">Créneaux</h3>
+          {% if home %}
+          <ul class="space-y-3">
+            <li class="flex justify-between items-center text-sm">
+              <span class="text-text font-medium">{{ home.data.slot_1_title }}</span>
+              <span class="text-muted">{{ home.data.slot_1_hours }}</span>
+            </li>
+            <li class="flex justify-between items-center text-sm border-t border-border pt-3">
+              <span class="text-text font-medium">{{ home.data.slot_2_title }}</span>
+              <span class="text-muted">{{ home.data.slot_2_hours }}</span>
+            </li>
+            <li class="flex justify-between items-center text-sm border-t border-border pt-3">
+              <span class="text-text font-medium">{{ home.data.slot_3_title }}</span>
+              <span class="text-muted">{{ home.data.slot_3_hours }}</span>
+            </li>
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -91,9 +91,50 @@ collections:
         label: "🏛️ L'Association"
         file: "src/about.md"
         fields:
-          - { label: "Titre de la page", name: "title", widget: "string" }
+          - { label: "Titre SEO", name: "title", widget: "string" }
           - { label: "Description SEO", name: "description", widget: "text" }
-          - { label: "Contenu", name: "body", widget: "markdown" }
+          - { label: "Accroche (petite ligne)", name: "page_eyebrow", widget: "string" }
+          - { label: "Titre de la page", name: "page_title", widget: "string" }
+          - { label: "Sous-titre", name: "page_subtitle", widget: "text" }
+          - { label: "Histoire — titre", name: "histoire_title", widget: "string" }
+          - { label: "Histoire — paragraphe 1", name: "histoire_p1", widget: "text" }
+          - { label: "Histoire — paragraphe 2", name: "histoire_p2", widget: "text" }
+          - { label: "Histoire — paragraphe 3", name: "histoire_p3", widget: "text" }
+          - { label: "Carte 1 — icône", name: "card_1_icon", widget: "string" }
+          - { label: "Carte 1 — titre", name: "card_1_title", widget: "string" }
+          - { label: "Carte 1 — description", name: "card_1_desc", widget: "text" }
+          - { label: "Carte 2 — icône", name: "card_2_icon", widget: "string" }
+          - { label: "Carte 2 — titre", name: "card_2_title", widget: "string" }
+          - { label: "Carte 2 — description", name: "card_2_desc", widget: "text" }
+          - { label: "Carte 3 — icône", name: "card_3_icon", widget: "string" }
+          - { label: "Carte 3 — titre", name: "card_3_title", widget: "string" }
+          - { label: "Carte 3 — description", name: "card_3_desc", widget: "text" }
+          - { label: "Bureau — accroche", name: "bureau_eyebrow", widget: "string" }
+          - { label: "Bureau — titre", name: "bureau_title", widget: "string" }
+          - { label: "Bureau — sous-titre", name: "bureau_subtitle", widget: "text" }
+          - { label: "Bureau — rôle 1 icône", name: "bureau_1_icon", widget: "string" }
+          - { label: "Bureau — rôle 1 titre", name: "bureau_1_role", widget: "string" }
+          - { label: "Bureau — rôle 1 description", name: "bureau_1_desc", widget: "text" }
+          - { label: "Bureau — rôle 2 icône", name: "bureau_2_icon", widget: "string" }
+          - { label: "Bureau — rôle 2 titre", name: "bureau_2_role", widget: "string" }
+          - { label: "Bureau — rôle 2 description", name: "bureau_2_desc", widget: "text" }
+          - { label: "Bureau — rôle 3 icône", name: "bureau_3_icon", widget: "string" }
+          - { label: "Bureau — rôle 3 titre", name: "bureau_3_role", widget: "string" }
+          - { label: "Bureau — rôle 3 description", name: "bureau_3_desc", widget: "text" }
+          - { label: "Bureau — rôle 4 icône", name: "bureau_4_icon", widget: "string" }
+          - { label: "Bureau — rôle 4 titre", name: "bureau_4_role", widget: "string" }
+          - { label: "Bureau — rôle 4 description", name: "bureau_4_desc", widget: "text" }
+          - { label: "Bureau — rôle 5 icône", name: "bureau_5_icon", widget: "string" }
+          - { label: "Bureau — rôle 5 titre", name: "bureau_5_role", widget: "string" }
+          - { label: "Bureau — rôle 5 description", name: "bureau_5_desc", widget: "text" }
+          - { label: "Bureau — rôle 6 icône", name: "bureau_6_icon", widget: "string" }
+          - { label: "Bureau — rôle 6 titre", name: "bureau_6_role", widget: "string" }
+          - { label: "Bureau — rôle 6 description", name: "bureau_6_desc", widget: "text" }
+          - { label: "Lieu — accroche", name: "lieu_eyebrow", widget: "string" }
+          - { label: "Lieu — titre section", name: "lieu_title", widget: "string" }
+          - { label: "Lieu — nom", name: "lieu_name", widget: "string" }
+          - { label: "Lieu — adresse", name: "lieu_address", widget: "text" }
+          - { label: "Lieu — description", name: "lieu_desc", widget: "text" }
 
       - name: "join"
         label: "🤝 Nous Rejoindre"
