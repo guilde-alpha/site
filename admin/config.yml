@@ -144,6 +144,32 @@ collections:
           - { label: "Description SEO", name: "description", widget: "text" }
           - { label: "Contenu", name: "body", widget: "markdown" }
 
+      - name: "events"
+        label: "📅 Événements"
+        file: "src/events.md"
+        fields:
+          - { label: "Titre SEO", name: "title", widget: "string" }
+          - { label: "Description SEO", name: "description", widget: "text" }
+          - { label: "Accroche (petite ligne)", name: "page_eyebrow", widget: "string" }
+          - { label: "Titre de la page", name: "page_title", widget: "string" }
+          - { label: "Sous-titre", name: "page_subtitle", widget: "text" }
+          - { label: "Section participer — titre", name: "participate_title", widget: "string" }
+          - { label: "Étape 1 — titre", name: "step_1_title", widget: "string" }
+          - { label: "Étape 1 — description", name: "step_1_desc", widget: "text" }
+          - { label: "Étape 1 — texte bouton", name: "step_1_cta", widget: "string" }
+          - { label: "Étape 2 — titre", name: "step_2_title", widget: "string" }
+          - { label: "Étape 2 — description", name: "step_2_desc", widget: "text" }
+          - { label: "Étape 3 — titre", name: "step_3_title", widget: "string" }
+          - { label: "Étape 3 — description", name: "step_3_desc", widget: "text" }
+          - { label: "Calendrier — titre", name: "calendar_title", widget: "string" }
+          - { label: "Calendrier — sous-titre", name: "calendar_subtitle", widget: "string" }
+          - { label: "Calendrier — texte bouton", name: "calendar_cta", widget: "string" }
+          - { label: "Types — titre section", name: "types_title", widget: "string" }
+          - { label: "Type 1 — titre", name: "type_1_title", widget: "string" }
+          - { label: "Type 1 — description", name: "type_1_desc", widget: "text" }
+          - { label: "Type 2 — titre", name: "type_2_title", widget: "string" }
+          - { label: "Type 2 — description", name: "type_2_desc", widget: "text" }
+
   # --- Configuration du site ---
   - name: "settings"
     label: "⚙️ Paramètres du site"
@@ -157,6 +183,8 @@ collections:
           - { label: "Lien Discord", name: "discord", widget: "string" }
           - { label: "Lien HelloAsso (cotisation)", name: "helloasso", widget: "string" }
           - { label: "Adresse (lieu de jeu)", name: "address", widget: "string" }
+          - { label: "Google Calendar (lien direct)", name: "googleCalendar", widget: "string" }
+          - { label: "Google Calendar (URL d'intégration iframe)", name: "googleCalendarEmbed", widget: "string" }
 
   # --- Fiches de jeux ---
   - name: "games"

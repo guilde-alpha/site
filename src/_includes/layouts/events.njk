@@ -1,0 +1,97 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="pt-20">
+
+  <!-- Page header -->
+  <section class="py-20 bg-surface2 border-b border-border relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,149,58,0.08),transparent_60%)]"></div>
+    <div class="container mx-auto px-6 max-w-4xl relative">
+      <p class="text-gold text-sm font-medium uppercase tracking-widest mb-4">{{ page_eyebrow }}</p>
+      <h1 class="font-display font-bold text-5xl md:text-6xl text-text mb-6">{{ page_title }}</h1>
+      <p class="text-muted text-xl max-w-2xl leading-relaxed">{{ page_subtitle }}</p>
+    </div>
+  </section>
+
+  <!-- How to participate -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-bold text-text">{{ participate_title }}</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card group relative">
+          <div class="absolute -top-3 -left-3 w-8 h-8 bg-gold rounded-full flex items-center justify-center font-display font-bold text-dark text-sm">1</div>
+          <h3 class="font-display font-semibold text-text text-lg mb-3 mt-2">{{ step_1_title }}</h3>
+          <p class="text-muted text-sm leading-relaxed mb-4">{{ step_1_desc }}</p>
+          <a href="{{ site.discord }}" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4 inline-flex items-center gap-2">
+            {{ step_1_cta }}
+          </a>
+        </div>
+        <div class="card relative">
+          <div class="absolute -top-3 -left-3 w-8 h-8 bg-violet rounded-full flex items-center justify-center font-display font-bold text-white text-sm">2</div>
+          <h3 class="font-display font-semibold text-text text-lg mb-3 mt-2">{{ step_2_title }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ step_2_desc | md | safe }}</p>
+        </div>
+        <div class="card relative">
+          <div class="absolute -top-3 -left-3 w-8 h-8 bg-gold rounded-full flex items-center justify-center font-display font-bold text-dark text-sm">3</div>
+          <h3 class="font-display font-semibold text-text text-lg mb-3 mt-2">{{ step_3_title }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ step_3_desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar embed -->
+  <section class="py-16 bg-surface border-y border-border">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl font-bold text-text mb-3">{{ calendar_title }}</h2>
+        <p class="text-muted">{{ calendar_subtitle }}</p>
+      </div>
+
+      <div class="bg-surface2 border border-border rounded-2xl overflow-hidden">
+        <iframe
+          src="{{ site.googleCalendarEmbed }}"
+          style="border: 0"
+          width="100%"
+          height="600"
+          frameborder="0"
+          scrolling="no"
+          title="Calendrier de la Guilde Alpha"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="text-center mt-6">
+        <a href="{{ site.googleCalendar }}" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+          {{ calendar_cta }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Party types info -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-bold text-text">{{ types_title }}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-surface2 border border-border border-l-4 border-l-gold rounded-2xl p-6">
+          <h3 class="font-display font-semibold text-text text-lg mb-3">{{ type_1_title }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ type_1_desc }}</p>
+        </div>
+        <div class="bg-surface2 border border-border border-l-4 border-l-violet rounded-2xl p-6">
+          <h3 class="font-display font-semibold text-text text-lg mb-3">{{ type_2_title }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ type_2_desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
