@@ -48,9 +48,20 @@ collections:
           - { label: "Section JDR — titre", name: "jdr_title", widget: "string" }
           - { label: "Section JDR — intro", name: "jdr_intro", widget: "text" }
           - { label: "Section JDR — suite", name: "jdr_body", widget: "text" }
+          - { label: "Carte JDR 1 — icône (emoji)", name: "jdr_card_1_icon", widget: "string" }
+          - { label: "Carte JDR 1 — titre", name: "jdr_card_1_title", widget: "string" }
+          - { label: "Carte JDR 1 — description", name: "jdr_card_1_desc", widget: "string" }
+          - { label: "Carte JDR 2 — icône (emoji)", name: "jdr_card_2_icon", widget: "string" }
+          - { label: "Carte JDR 2 — titre", name: "jdr_card_2_title", widget: "string" }
+          - { label: "Carte JDR 2 — description", name: "jdr_card_2_desc", widget: "string" }
+          - { label: "Carte JDR 3 — icône (emoji)", name: "jdr_card_3_icon", widget: "string" }
+          - { label: "Carte JDR 3 — titre", name: "jdr_card_3_title", widget: "string" }
+          - { label: "Carte JDR 3 — description", name: "jdr_card_3_desc", widget: "string" }
+          - { label: "Carte JDR 4 — icône (emoji)", name: "jdr_card_4_icon", widget: "string" }
+          - { label: "Carte JDR 4 — titre", name: "jdr_card_4_title", widget: "string" }
+          - { label: "Carte JDR 4 — description", name: "jdr_card_4_desc", widget: "string" }
           - { label: "Créneaux — titre", name: "sessions_title", widget: "string" }
           - { label: "Créneaux — lieu", name: "sessions_location", widget: "string" }
-          - { label: "Créneau 1 — abréviation (ex: Ve)", name: "slot_1_label", widget: "string" }
           - { label: "Créneau 1 — nom", name: "slot_1_title", widget: "string" }
           - { label: "Créneau 1 — horaires", name: "slot_1_hours", widget: "string" }
           - { label: "Créneau 1 — description", name: "slot_1_desc", widget: "string" }
@@ -58,7 +69,6 @@ collections:
             name: "slot_1_color"
             widget: "select"
             options: ["gold", "violet"]
-          - { label: "Créneau 2 — abréviation (ex: Sa)", name: "slot_2_label", widget: "string" }
           - { label: "Créneau 2 — nom", name: "slot_2_title", widget: "string" }
           - { label: "Créneau 2 — horaires", name: "slot_2_hours", widget: "string" }
           - { label: "Créneau 2 — description", name: "slot_2_desc", widget: "string" }
@@ -66,7 +76,6 @@ collections:
             name: "slot_2_color"
             widget: "select"
             options: ["gold", "violet"]
-          - { label: "Créneau 3 — abréviation (ex: Di)", name: "slot_3_label", widget: "string" }
           - { label: "Créneau 3 — nom", name: "slot_3_title", widget: "string" }
           - { label: "Créneau 3 — horaires", name: "slot_3_hours", widget: "string" }
           - { label: "Créneau 3 — description", name: "slot_3_desc", widget: "string" }
